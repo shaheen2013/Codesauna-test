@@ -2,6 +2,11 @@ import Image from "next/image";
 
 import data from "/app/data.json";
 
+export const metadata = {
+  title: "Codesauna",
+  description: "codesauna",
+};
+
 export default function Home() {
   console.log("data", data);
 
