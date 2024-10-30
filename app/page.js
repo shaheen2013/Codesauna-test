@@ -1,13 +1,20 @@
 export default function Home() {
   return (
     <div class="bg-gray-100 flex items-center justify-center min-h-screen">
-      <div class="flex bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-2xl">
+      <div class="flex bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-xl">
         {/* <!-- Left Panel --> */}
-        <div class="flex flex-col items-center justify-center w-1/2 bg-gradient-to-br from-purple-700 to-purple-500 text-white p-4 text-center">
-          <h2 class="text-lg font-semibold mb-4">Your Result</h2>
-          <div class="text-6xl font-bold mb-2">76</div>
-          <p class="text-xl font-semibold">Great</p>
-          <p class="text-sm mt-2 opacity-80">
+        <div class="flex flex-col items-center justify-center w-1/2 bg-gradient-to-b from-[hsl(252,100%,67%)] to-[hsl(241,81%,54%)] text-white p-8 text-center rounded-2xl">
+          <h2 class="text-lg font-semibold mb-6 opacity-80">Your Result</h2>
+
+          {/* circle */}
+          <div className="bg-gradient-to-b from-[hsla(256,72%,46%,1)] to-[hsla(241,72%,46%,0)]  h-36 w-36 flex justify-center items-center flex-col rounded-full mb-6">
+            <div class="text-6xl font-bold">76</div>
+            <div className="opacity-50 text-sm">of 100</div>
+          </div>
+
+          {/* result */}
+          <p class="text-2xl font-semibold">Great</p>
+          <p class="text-sm mt-2 opacity-60 px-8">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
