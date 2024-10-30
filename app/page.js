@@ -6,7 +6,7 @@ export default function Home() {
   console.log("data", data);
 
   return (
-    <div class="bg-gray-[FFFFFF] flex items-center justify-center min-h-screen">
+    <div class="bg-gray-[FFFFFF] flex items-center justify-center lg:min-h-screen">
       <div class="flex bg-white shadow-bluish overflow-hidden w-full max-w-xl lg:flex-row flex-col lg:rounded-xl">
         {/* <!-- Left Panel --> */}
         <div class="flex flex-col items-center lg:w-1/2 bg-gradient-to-b from-[hsl(252,100%,67%)] to-[hsl(241,81%,54%)] text-white p-6 text-center lg:rounded-2xl rounded-b-[32px]">
