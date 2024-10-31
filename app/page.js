@@ -8,7 +8,11 @@ export const metadata = {
 };
 
 export default function Home() {
-  console.log("data", data);
+  // calculate the overall percentage based on the data
+  const totalScore = data.reduce((sum, item) => sum + item.score, 0);
+  const percentage = Math.floor(totalScore / data.length);
+
+  console.log("percentage", percentage, percentage / 400);
 
   return (
     <div class="bg-gray-[FFFFFF] flex items-center justify-center lg:min-h-screen">
@@ -21,7 +25,7 @@ export default function Home() {
 
           {/* circle */}
           <div className="bg-gradient-to-b from-[hsla(256,72%,46%,1)] to-[hsla(241,72%,46%,0)]  h-[150px] w-[150px] flex justify-center items-center flex-col rounded-full mb-6">
-            <div class="text-6xl font-bold">76</div>
+            <div class="text-6xl font-bold">{percentage || 0}</div>
             <div className="opacity-50 text-sm">of 100</div>
           </div>
 
@@ -55,7 +59,7 @@ export default function Home() {
                 <span>Reaction</span>
               </div>
               <div class="font-semibold text-gray-700 text-md">
-                80 <span className="text-gray-400"> / 100</span>
+                {data?.[0]?.score} <span className="text-gray-400"> / 100</span>
               </div>
             </div>
 
@@ -73,7 +77,7 @@ export default function Home() {
                 <span>Memory</span>
               </div>
               <div class="font-semibold text-gray-700 text-md">
-                92 <span className="text-gray-400"> / 100</span>
+                {data?.[1]?.score} <span className="text-gray-400"> / 100</span>
               </div>
             </div>
 
@@ -91,7 +95,7 @@ export default function Home() {
                 <span>Verbal</span>
               </div>
               <div class="font-semibold text-gray-700 text-md">
-                61 <span className="text-gray-400"> / 100</span>
+                {data?.[2]?.score} <span className="text-gray-400"> / 100</span>
               </div>
             </div>
 
@@ -109,7 +113,7 @@ export default function Home() {
                 <span>Visual</span>
               </div>
               <div class="font-semibold text-gray-700 text-md">
-                72 <span className="text-gray-400"> / 100</span>
+                {data?.[3]?.score} <span className="text-gray-400"> / 100</span>
               </div>
             </div>
           </div>
